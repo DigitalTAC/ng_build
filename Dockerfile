@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 # gnupg2, unzip, curl, wget
-RUN apt-get update && apt-get install -y software-properties-common gnupg2 unzip curl wget && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y software-properties-common gnupg2 unzip curl wget build-essential libkrb5-dev && rm -rf /var/lib/apt/lists/*
 
 # nodejs
 RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
