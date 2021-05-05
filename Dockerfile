@@ -7,13 +7,11 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 RUN apt-get update && apt-get install -y software-properties-common gnupg2 unzip libkrb5-dev build-essential curl wget && rm -rf /var/lib/apt/lists/*
 
 # nodejs
-RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+# RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 # RUN sh -c "echo deb https://deb.nodesource.com/node_10.x bionic main > /etc/apt/sources.list.d/nodesource.list"
 # RUN apt-get install -y nodejs
-
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
-
 
 # sonar-scanner-cli
 WORKDIR /root
