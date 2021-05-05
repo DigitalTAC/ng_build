@@ -1,5 +1,5 @@
 # ng_build
-node 10.16.0  
+node 16.x   
 Chrome  
 Firefox  
 angular/cli  
